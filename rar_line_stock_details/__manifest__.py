@@ -2,7 +2,7 @@
 {
     'name': "Line Stock Details Visibility",
 
-    'summary': "This module enables the stock quantity available with location breakdown. Please see description of the module for details.",
+    'summary': "Enables visibility of stock on sale order lines, purchase lines and inventory operations line. Please see description of the module for details.",
 
     'description': """
         This module is used to Add the product stock quantity with a details viewing button. The Features Are Described Below:
