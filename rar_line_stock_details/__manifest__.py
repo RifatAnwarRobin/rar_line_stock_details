@@ -33,7 +33,7 @@
         'views/stock_move.xml',
         # 'views/mrp_production_view.xml',
     ],
-    'icon': 'static/description/stock_details.png',
+    'icon': 'rar_line_stock_details/static/description/stock_details.png',
     'images': ['static/description/stock_details.png'],
     
     'sequence':-199,
