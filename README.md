@@ -31,25 +31,6 @@ The module can be **extended upon request** and also **converted to different Od
 
 ---
 
-## 📷 Screenshots & Demo
-
-### Sale Order Line Stock Availability
-![Sale Order Line 1](screens/s1.jpeg)  
-![Sale Order Line 2](screens/s2.jpeg)  
-
-### Purchase Order Line Stock Availability
-![Purchase Order Line 1](screens/s4.jpeg)  
-![Purchase Order Line 2](screens/s5.jpeg)  
-
-### Stock Move – Inventory Operations
-![Stock Move 1](screens/s6.jpeg)  
-![Stock Move 2](screens/s7.jpeg)  
-
-### Filters Overview
-![Filters](screens/s8.jpeg)  
-
----
-
 ## 💡 Why Choose This Module?
 
 Standard stock reports require multiple clicks.  
