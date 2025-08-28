@@ -34,7 +34,7 @@
         # 'views/mrp_production_view.xml',
     ],
     'icon': 'rar_line_stock_details/static/description/icon.png',
-    'images': ['static/description/icon.png'],
+    'images': ['static/description/icon1.png'],
     
     'sequence':-199,
     'application': True,
