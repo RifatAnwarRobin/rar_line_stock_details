@@ -1,0 +1,31 @@
+<odoo>
+  <record id="sol_view_stock_quant_location_tree" model="ir.ui.view">
+      <field name="name">stock.quant.location.tree</field>
+      <field name="model">stock.quant</field>
+      <field name="arch" type="xml">
+          <tree create="false" edit="false" delete="false">
+              <field name="location_id"/>
+              <field name="lot_id"/>
+              <field name="quantity"/>
+              <field name="available_quantity"/>
+              <field name="product_uom_id"/>
+          </tree>
+      </field>
+  </record>
+  <record id="xtend_view_sale_order_form" model="ir.ui.view">
+      <field name="name">xtend.view.sale.order.form</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form" />
+      <field name="arch" type="xml">
+          <xpath expr="//field[@name='order_line']/tree/field[@name='name']" position="after">
+            <field name="sol_qty_available" optional="show"/>
+            <button name="sol_action_view_stock_details" 
+                        type="object"
+                        string="Stock Details"
+                        icon="fa-cubes"
+                        attrs="{'invisible': [('product_id', '=', False)]}"
+                        invisible="0"/>
+          </xpath>
+      </field>
+  </record>
+</odoo>

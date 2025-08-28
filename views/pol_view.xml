@@ -1,0 +1,31 @@
+<odoo>
+  <record id="pol_view_stock_quant_location_tree" model="ir.ui.view">
+      <field name="name">stock.quant.location.tree</field>
+      <field name="model">stock.quant</field>
+      <field name="arch" type="xml">
+          <tree create="false" edit="false" delete="false">
+              <field name="location_id"/>
+              <field name="lot_id"/>
+              <field name="quantity"/>
+              <field name="available_quantity"/>
+              <field name="product_uom_id"/>
+          </tree>
+      </field>
+  </record>
+  <record id="xtend_view_purchase_order_form" model="ir.ui.view">
+      <field name="name">xtend.view.purchase.order.form</field>
+      <field name="model">purchase.order</field>
+      <field name="inherit_id" ref="purchase.purchase_order_form" />
+      <field name="arch" type="xml">
+          <xpath expr="//field[@name='order_line']/tree/field[@name='product_qty']" position="before">
+          
+            <field name="pol_qty_available" optional="show"/>
+            <button name="pol_action_view_stock_details" 
+                        type="object"
+                        string="Stock Details"
+                        icon="fa-cubes"
+                        attrs="{'invisible': [('product_id', '=', False)]}"/>
+          </xpath>
+      </field>
+  </record>
+</odoo>
