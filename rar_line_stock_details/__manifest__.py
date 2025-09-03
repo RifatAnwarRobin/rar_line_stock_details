@@ -16,7 +16,7 @@
     'website': "https://rifatanwar.odoo.com",
     'category': 'Inventory/Inventory',
     'license': 'LGPL-3',
-    'version': '18.0.0.1',
+    'version': '17.0.0.1',
 
     'depends': [
         'sale',
