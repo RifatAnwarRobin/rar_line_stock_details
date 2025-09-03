@@ -3,13 +3,13 @@
       <field name="name">stock.quant.location.tree</field>
       <field name="model">stock.quant</field>
       <field name="arch" type="xml">
-          <tree create="false" edit="false" delete="false">
+          <list create="false" edit="false" delete="false">
               <field name="location_id"/>
               <field name="lot_id"/>
               <field name="quantity"/>
               <field name="available_quantity"/>
               <field name="product_uom_id"/>
-          </tree>
+          </list>
       </field>
   </record>
   <record id="xtend_view_purchase_order_form" model="ir.ui.view">
@@ -17,7 +17,7 @@
       <field name="model">purchase.order</field>
       <field name="inherit_id" ref="purchase.purchase_order_form" />
       <field name="arch" type="xml">
-          <xpath expr="//field[@name='order_line']/tree/field[@name='product_qty']" position="before">
+          <xpath expr="//field[@name='order_line']/list/field[@name='product_qty']" position="before">
           
             <field name="pol_qty_available" optional="show"/>
             <button name="pol_action_view_stock_details" 

@@ -3,13 +3,13 @@
       <field name="name">stock.quant.location.tree</field>
       <field name="model">stock.quant</field>
       <field name="arch" type="xml">
-          <tree create="false" edit="false" delete="false">
+          <list create="false" edit="false" delete="false">
               <field name="location_id"/>
               <field name="lot_id"/>
               <field name="quantity"/>
               <field name="available_quantity"/>
               <field name="product_uom_id"/>
-          </tree>
+          </list>
       </field>
   </record>
   <record id="xtend_view_mrp_production_form" model="ir.ui.view">
@@ -17,7 +17,7 @@
       <field name="model">mrp.production</field>
       <field name="inherit_id" ref="mrp.mrp_production_form_view" />
       <field name="arch" type="xml">
-          <xpath expr="//page[@name='components']/field[@name='move_raw_ids']/tree/field[@name='product_id']" position="after">
+          <xpath expr="//page[@name='components']/field[@name='move_raw_ids']/list/field[@name='product_id']" position="after">
             <field name="sm_qty_available" optional="show"/>
             <button name="sm_action_view_stock_details" 
                         type="object"

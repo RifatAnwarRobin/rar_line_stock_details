@@ -21,14 +21,14 @@ class SaleOrderLineX(models.Model):
         action = {
             'name': 'Stock by Location',
             'type': 'ir.actions.act_window',
-            'view_mode': 'tree',
+            'view_mode': 'list',
             'res_model': 'stock.quant',
             'domain': [
                 ('product_id', '=', self.product_id.id),
                 ('location_id.usage', '=', 'internal')
             ],
             'context': {'create': False, 'edit': False, 'delete': False},
-            'views': [(tree_view_id, 'tree')],
+            'views': [(tree_view_id, 'list')],
             'target': 'new',
         }
         return action
